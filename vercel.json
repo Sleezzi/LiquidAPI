@@ -2,7 +2,7 @@
     "version": 2,
     "name": "RedEye API",
     "builds": [
-        { "src": "index.ts", "use": "@vercel/nodemon" }
+        { "src": "index.ts", "use": "@vercel/node" }
     ],
     "routes": [
         { "src": "/(.*)", "dest": "/index.ts" }
