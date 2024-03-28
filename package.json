@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "ts-node index"
+    "start": "nodemon index.ts"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
@@ -9,6 +9,9 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
+    "@types/node": "^20.11.30",
+    "@types/nodemon": "^1.19.6",
+    "nodemon": "^3.1.0",
     "ts-node": "^10.9.2"
   }
 }
