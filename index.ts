@@ -1,4 +1,4 @@
-import express, { Express, Request, Response } from "express";
+import express, { Express, Request, Response, NextFunction } from "express";
 import bodyparser from "body-parser";
 
 import { readdirSync } from "fs";
@@ -7,6 +7,12 @@ const PORT: number | string = process.env.PORT || 3000;
 
 const app: Express = express();
 app.use(bodyparser.json());
+app.use((request: Request, response: Response, next: NextFunction) => {
+    response.setHeader('Access-Control-Allow-Origin', '*'); // Autoriser toutes les origines
+    response.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); // Autoriser les méthodes HTTP
+    response.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Autoriser certains en-têtes
+    next();
+});
 
 interface Page {
     name: string,
@@ -29,5 +35,5 @@ app.get("*", (request: Request, response: Response) => {
 });
 
 app.listen(PORT, () => {
-    console.log("API Launched!", PORT);
+    console.log("LiquidAPI is launched on the port:", PORT, `(http://localhost:${PORT})`);
 });
