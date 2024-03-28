@@ -1,8 +1,8 @@
 import express, { Express, Request, Response } from "express";
 module.exports = {
     name: "/",
-    type: "GET",
+    method: "GET",
     execute(request: Request, response: Response) {
-        response.status(200).json({status: 200});
+        require("../error")(request, response, 404);
     }
 }

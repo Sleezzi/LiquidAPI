@@ -1,8 +1,8 @@
 import express, { Express, Request, Response } from "express";
 module.exports = {
     name: "/new_ticket",
-    type: "POST",
+    method: "POST",
     execute(request: Request, response: Response) {
-        response.status(200).json({status: 200});
+        response.status(200).json({kjfsf: "jefksj"});
     }
 }
