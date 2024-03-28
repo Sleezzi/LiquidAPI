@@ -1,18 +1,18 @@
 {
-  "scripts": {
-    "start": "nodemon index.ts"
-  },
-  "dependencies": {
-    "@types/express": "^4.17.21",
-    "@types/node": "^20.11.30",
-    "@types/nodemon": "^1.19.6",
-    "body-parser": "^1.20.2",
-    "express": "^4.19.2",
-    "tsc": "^2.0.4",
-    "typescript": "^5.4.3"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.0",
-    "ts-node": "^10.9.2"
-  }
+    "scripts": {
+        "start": "nodemon index.ts"
+    },
+    "dependencies": {
+        "body-parser": "^1.20.2",
+        "express": "^4.19.2"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.21",
+        "@types/node": "^20.11.30",
+        "@types/nodemon": "^1.19.6",
+        "nodemon": "^3.1.0",
+        "ts-node": "^10.9.2",
+        "tsc": "^2.0.4",
+        "typescript": "^5.4.3"
+    }
 }

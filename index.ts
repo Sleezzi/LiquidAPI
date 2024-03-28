@@ -17,7 +17,7 @@ interface Page {
 for (const file of readdirSync("./pages").filter((file: string) => file.endsWith(".ts"))) {
     const page: Page = require(`./pages/${file}`);
     if (page.name && page.execute) {
-        app["get"](page.name, (request: Request, response: Response) =>  page.execute(request, response));
+        app[page.method.toLowerCase() as keyof Express || "get"](page.name, (request: Request, response: Response) =>  page.execute(request, response));
         console.log(`Pages ${page.name} loaded!`);
     } else {
         console.log(`Pages ${file} not loaded: Somethings is missing in file`);
