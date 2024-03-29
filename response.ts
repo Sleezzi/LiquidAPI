@@ -9,7 +9,6 @@ const codeList: { [index: number]: string } = {
 }
 
 module.exports = function (request: Request, response: Response, code: number) {
-    if (request.accepts("html")) return response.send("<meta http-equiv=\"refresh\" content=\"0; url=https://sleezzi.fr\">");
     if (codeList[code]) {
         response.status(code).json({
             status: code,

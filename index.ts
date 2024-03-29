@@ -31,7 +31,7 @@ for (const file of readdirSync("./pages").filter((file: string) => file.endsWith
 }
 
 app.get("*", (request: Request, response: Response) => {
-    require("./error")(request, response, 404);
+    require("./response")(request, response, 404);
 });
 
 app.listen(PORT, () => {
